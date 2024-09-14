@@ -8,6 +8,11 @@ type Values = {
   q: number
 }
 
+type Lambdas = {
+  lambda1: number | string,
+  lambda2: number | string
+}
+
 const defaultValues = {
   a: 1,
   p: 0,
@@ -32,7 +37,7 @@ export function Home() {
   const [showResult, setShowResult] = useState<boolean>(false)
   const [result, setResult] = useState<string>("")
   const [delta, setDelta] = useState<number>(0)
-  const [lambdas, setLambdas] = useState({
+  const [lambdas, setLambdas] = useState<Lambdas>({
     lambda1: 0,
     lambda2: 0
   })
